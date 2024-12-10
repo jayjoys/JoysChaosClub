@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Joys - Cart</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <style>
+    /* Styling untuk halaman Cart */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000; /* Background hitam */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+      color: #D4AF37; /* Warna emas */
+      font-size: 80px; /* Ukuran font logo lebih besar */
+      font-family: 'UnifrakturMaguntia', serif; /* Font Gothic */
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out; /* Animasi pembesaran lebih tegas */
+      text-decoration: none; /* Menghilangkan garis bawah */
+    }
+
+    .logo:hover {
+      transform: scale(1.5); /* Membesar saat hover */
+    }
+
+    /* Cart section */
+    .cart-section {
+      color: white;
+      font-family: Arial, sans-serif;
+      width: 100%;
+      max-width: 500px; /* Maksimal lebar untuk section */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .cart-empty {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    /* Footer Styling */
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo yang mengarah ke index.html -->
+  <a href="index.html" class="logo">𝕵𝖔𝖞𝖘</a>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <!-- Pesan jika cart kosong -->
+    <div class="cart-empty">
+      <p>Your cart is currently empty.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Joys - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

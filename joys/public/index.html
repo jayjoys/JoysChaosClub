@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Joys - Home</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- Link ke font gothic -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <style>
+    /* Styling untuk halaman utama */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000; /* Background hitam */
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden; /* Untuk menyembunyikan overflow hujan */
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #111;
+      padding: 15px 30px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #D4AF37;
+      font-size: 18px;
+      font-family: 'UnifrakturMaguntia', serif;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    /* Banner Section */
+    .banner {
+      text-align: center;
+      margin-top: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h1 {
+      font-size: 70px;
+      color: #D4AF37;
+      font-family: 'UnifrakturMaguntia', serif;
+    }
+
+    /* Rain Effect */
+    .rain {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none; /* Agar hujan tidak menghalangi klik */
+    }
+
+    .raindrop {
+      position: absolute;
+      width: 2px;
+      height: 10px;
+      background: white;
+      opacity: 0.8;
+      filter: blur(1px); /* Efek buram */
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      from {
+        transform: translateY(-100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(100vh);
+        opacity: 0.2;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Efek Hujan -->
+  <div class="rain"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">𝕵𝖔𝖞𝖘</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <h1>Welcome to Joys</h1>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Joys - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Script untuk menciptakan hujan
+    const rainContainer = document.querySelector('.rain');
+
+    function createRain() {
+      for (let i = 0; i < 150; i++) { // Menambah jumlah tetesan untuk efek lebih nyata
+        const raindrop = document.createElement('div');
+        raindrop.classList.add('raindrop');
+
+        // Posisi acak horizontal
+        raindrop.style.left = `${Math.random() * 100}vw`;
+
+        // Durasi dan kecepatan animasi acak
+        const duration = Math.random() * 2 + 3; // 3-5 detik
+        raindrop.style.animationDuration = `${duration}s`;
+
+        // Delay acak agar hujan terlihat berkelanjutan
+        raindrop.style.animationDelay = `${Math.random() * 2}s`;
+
+        // Variasi ukuran hujan untuk lebih realistis
+        const size = Math.random() * 2 + 1; // Ukuran 1-3px
+        raindrop.style.width = `${size}px`;
+        raindrop.style.height = `${size * 5}px`;
+
+        rainContainer.appendChild(raindrop);
+      }
+    }
+
+    createRain();
+  </script>
+</body>
+</html>

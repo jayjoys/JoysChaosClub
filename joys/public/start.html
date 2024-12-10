@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Joys</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- Link ke font gothic -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <style>
+    /* Styling untuk halaman Start */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000; /* Background hitam */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Menyusun logo dan instruksi secara vertikal */
+      text-align: center; /* Untuk menyelaraskan teks */
+    }
+
+    /* Logo */
+    .logo {
+      color: #D4AF37; /* Warna emas */
+      font-size: 80px; /* Ukuran font logo lebih besar */
+      font-family: 'UnifrakturMaguntia', serif; /* Font Gothic */
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out; /* Animasi pembesaran lebih tegas */
+      text-decoration: none; /* Menghilangkan garis bawah */
+    }
+
+    .logo:hover {
+      transform: scale(1.5); /* Membesar saat hover */
+    }
+
+    /* Instruksi "Click icon to start" */
+    .instruction {
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin-top: 20px;
+      opacity: 0; /* Awalnya instruksi tidak terlihat */
+      animation: fadeInOut 3s ease-in-out infinite; /* Animasi muncul dan hilang */
+    }
+
+    /* Animasi untuk teks */
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo yang mengarah ke index.html -->
+  <a href="index.html" class="logo">
+    𝕵𝖔𝖞𝖘
+  </a>
+
+  <!-- Instruksi "Click icon to start" -->
+  <p class="instruction">Click icon to start</p>
+
+</body>
+</html>
